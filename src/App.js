@@ -8,13 +8,17 @@ import Step06 from './gsap/step06';
 import Step07 from './gsap/step07';
 import Step08 from './gsap/step08';
 import Step09 from './gsap/step09';
+import Step10 from './gsap/step10';
 
 function App() {
   return (
     <>
-      <section className='h-dvh bg-black text-white flex justify-center items-center border-4 border-red-600'>
-        <div className='text-8xl uppercase leading-tight'>
-          <span className='text-transparent block' style={{WebkitTextStroke:'2px #b1dd40'}}>GSAP</span>
+ 
+      <Step09 />
+      <Step10 />
+      <section className='flex items-center justify-center text-white bg-black border-4 border-red-600 h-dvh'>
+        <div className='leading-tight uppercase text-8xl'>
+          <span className='block text-transparent' style={{WebkitTextStroke:'2px #b1dd40'}}>GSAP</span>
           ScrollTrigger
         </div>
       </section>
@@ -26,9 +30,8 @@ function App() {
       <Step06 />
       <Step07 />
       <Step08 />
-      <Step09 />
-      <section className='h-dvh bg-black text-white flex justify-center items-center border-4 border-red-600'>
-        <div className='text-8xl uppercase leading-tight'>
+      <section className='flex items-center justify-center text-white bg-black border-4 border-red-600 h-dvh'>
+        <div className='leading-tight uppercase text-8xl'>
           Footer
         </div>
       </section>
