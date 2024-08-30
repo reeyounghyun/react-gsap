@@ -9,6 +9,7 @@ import Step07 from './gsap/step07';
 import Step08 from './gsap/step08';
 import Step09 from './gsap/step09';
 import Step10 from './gsap/step10';
+import Step11 from './gsap/step11';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <Step04 />
       <Step05 />
       <Step06 />
+      <Step11 />
       <Step07 />
       <Step08 />
       <section className='flex items-center justify-center text-white bg-black border-4 border-red-600 h-dvh'>

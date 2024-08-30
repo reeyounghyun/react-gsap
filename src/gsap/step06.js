@@ -22,13 +22,14 @@ const Step06 = () => {
                     ease:'none',
                     scrollTrigger : {
                         trigger:triggerRef.current,
-                        pin:true,
-                        scrub:1,
-                        start:'center center',
+                        pin:true,// 애니메이션 동안 트리거 요소를 고정시킵니다.
+                        scrub:1, //스크롤 위치와 애니메이션 진행을 동기화시킵니다. 1은 부드러운 추적을 위한 값입니다.
+                        start:'center center', //뷰포트의 중앙에 트리거의 중앙이 도달했을 때 애니메이션을 시작합니다.
                         end:'300%', // 뷰포트 높이의 300% -> 숫자가 클수록 느려짐
-                        markers : true
+                        markers: true//개발 중 시각적 도움을 위한 마커를 표시합니다.
                     }
                 });
+                //가로 스크롤을 만들어내는 부분
 
                 imgBoxRefs.current.forEach(imgBox => {
                     gsap.timeline({
@@ -160,7 +161,7 @@ const Step06 = () => {
                 Step06: 이 컴포넌트에서는 반응형 설정(ScrollTrigger.matchMedia)을 사용하고 있으며, 여러 개의 ScrollTrigger 인스턴스가 생성됩니다. 따라서 컴포넌트가 언마운트될 때 모든 인스턴스를 명시적으로 제거해야 합니다.
                             
                 */
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+              ScrollTrigger.getAll().forEach(trigger => trigger.kill());
              //ScrollTrigger 반응형 할 때 사용
         };
     },[]);
@@ -178,7 +179,7 @@ const Step06 = () => {
                     className='w-[700px] p-[100px] box-border flex-shrink-0'
                 >
                     <a className='relative block w-full' href="/">
-                        <div ref={el => numRefs.current[index] = el} className='num' data-text={index + 1} ref={el => numRefs.current[index] = el}></div>
+                        <div ref={el => numRefs.current[index] = el} className='num' data-text={index + 1}></div>
                         <div className='relative imgBox' 
                         ref={el => imgBoxRefs.current[index] = el}>
                             <img className='w-full' src={src} alt={`Work ${index + 1}`} />
