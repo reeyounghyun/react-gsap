@@ -18,7 +18,7 @@ const CircularText = ({ text }) => {
           font-family: 'serif';
           font-size: 3.8px;
           font-weight: 500;
-          letter-spacing: 4.25px;
+          letter-spacing: 5.25px;
         }
       `}
     </style>
@@ -52,7 +52,7 @@ const Step09 = () => {
     <section ref={triggerRef} className='relative w-full text-white bg-black border-4 border-red-600 h-dvh'>
         <div ref={stageRef} className="h-full max-w-[200px] my-0 mx-auto" style={{background: 'url(img_3.png)',backgroundRepeat: 'no-repeat', backgroundPosition: '0 center'}}></div>
         <div className="w-[450px] h-[450px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <CircularText text="React PORTFOLIO 잘 부탁드립니다." />
+            <CircularText text="방문해 주셔서 감사합니다 잘 부탁드립니다. "/>
         </div>
     </section>
   )
